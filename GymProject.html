@@ -1,0 +1,106 @@
+
+<!DOCTYPE>
+<html>
+<head>
+<title>Spartan CrossFit Gym</title>
+<style>
+body  {
+    background-image: url("http://uptcrossfit.com/wp-content/uploads/2013/06/UPT-gym-31.jpg");
+    
+}
+</style>
+
+<script>
+
+
+
+function doClear()
+{
+	document.GYM.customer.value = "";
+	document.GYM.address.value = "";
+	document.GYM.city.value = "";
+	document.GYM.state.value = "";
+	document.GYM.zip.value = "";
+	document.GYM.phone.value = "";
+	document.GYM.email.value = "";
+	return;
+}
+function doSubmit()
+{
+	if (validateText() == false)
+	{
+		alert("Required data missing:")
+		return;
+	}
+	alert("Welcome to the Spartan Army!")
+	return;
+}
+function validateText()
+{
+	var customer = document.GYM.customer.value;
+	if (customer.length == 0) return false;
+	var address = document.GYM.address.value;
+	if (address.length == 0) return false;
+	var city = document.GYM.city.value;
+	if (city.length == 0) return false;
+	var phone = document.GYM.phone.value;
+	if (phone.length == 0) return false;
+	var email = document.GYM.email.value;
+	if (email.length == 0) return false;
+	return true;
+}
+</script>
+</head>
+
+<body>
+<header>
+<center>
+      <a href="home.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="Membership.html">Membership</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="GymProject.html">GymProject</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="contactus.html">Contact</a>
+      </center>
+    </header>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<center>
+	<form name="GYM">
+		<center><h1 style="color:red;">Spartan CrossFit Gym</h1></center>
+		<p>
+			<h4>Please fill out member information below:</h4>
+			<font face="Courier New">
+				<h5>Name</h5> &nbsp;&nbsp;&nbsp;<input name="customer" size="50" type="text"><br>
+				<h5>Address</h5> <input name="address" size="50" type="text"><br>
+				<h5>City</h5> &nbsp;&nbsp;&nbsp;<input name="city" size="15" type="text">
+				<h5>State</h5> <input name="state" size="2" type="text">
+				<h5>Zip</h5> <input name="zip" size="5" type="text"><br>
+				<h5>Phone</h5> <input name="phone" size="11" type="text"><br>
+				<h5>Email</h5> <input name="email" size="50" type="text">
+				<br></br>
+				*=Required Fields.
+			</font>
+		</p>
+		<p>
+			<h4>Select the type of membership you wish to have:</h4>
+			    	<select id="country" name="country">
+                		<option value="Spartan">Spartan</option>
+						<option value="Gold">Gold</option>
+						<option value="bronze">Bronze</option>
+                		<option value="silver">Silver</option>
+                		
+                		</select><br/><br/>
+
+		<input type="button" value="Submit Order" onClick="doSubmit()">
+		<input type="button" value="Clear Entries" onClick="doClear()">
+	</form>
+	</center>
+</body>
+</html>	
